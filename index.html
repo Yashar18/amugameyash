@@ -668,7 +668,7 @@ const PAL=[
  {n:'سرباز ۲',h:.99,s:.78,acc:0xff3040,css:'#ff5a66',post:[4.5,-7.2],price:1000},
  {n:'سرباز ۳',h:.12,s:.85,acc:0xffc93a,css:'#ffd24a',post:[.8,-6],price:2000}
 ];
-const AL=[],dpEl=$('dp');let lastKey='';
+const AL=[],dpEl=$('dp');window.AL=AL;window.hire=hire;let lastKey='';
 function tint(m,c){const hsl={};m.traverse(o=>{if(!o.isMesh)return;const mt=o.material.clone(),nm=o.name||'';mt.color.getHSL(hsl);
  if(hsl.s>.4||/patch|buckle|antenna/.test(nm)){mt.color.setHex(c.acc);mt.emissive.setHex(c.acc);mt.emissiveIntensity=.55}
  else mt.color.setHSL(c.h,c.s,Math.min(.55,hsl.l*1.25+.05));
